@@ -3,6 +3,15 @@
 
 ## Frontend (`courses-frontend`)
 
+![Screenshot (124)](https://github.com/user-attachments/assets/9c2cf48a-2c09-41a6-ba7b-f523993d41a7)
+
+
+
+![Screenshot (125)](https://github.com/user-attachments/assets/21306c87-b432-476a-8140-7504ccd736ac)
+
+
+
+
 
 # 🖥 Courses Frontend (React + Vite + Docker)
 
@@ -43,6 +52,7 @@ npm run dev
 
 # Build Docker image
 docker build -t mohdafzal123/course-frontend .
+
 
 # Push to DockerHub
 docker login
