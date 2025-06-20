@@ -60,17 +60,17 @@ const CourseInstanceForm = () => {
       });
 
       if (res.ok) {
-        setMessage('✅ Course instance created successfully.');
+        setMessage(' Course instance created successfully.');
         setYear('');
         setSemester('');
         setSelectedCourseId('');
       } else {
         const err = await res.text();
-        setMessage(`❌ Error: ${err}`);
+        setMessage(` Error: ${err}`);
       }
     } catch (error) {
       console.error("Submit error:", error);
-      setMessage('❌ Failed to create course instance.');
+      setMessage(' Failed to create course instance.');
     } finally {
       setSubmitting(false);
     }

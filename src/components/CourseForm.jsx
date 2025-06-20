@@ -36,11 +36,11 @@ const CourseForm = ({ course, onSuccess = () => {}, onCancel = () => {} }) => {
       }
 
       console.log("Response:", response.data);
-      setMessage("✅ Course saved successfully!");
+      setMessage(" Course saved successfully!");
       onSuccess(); // will not crash now
     } catch (error) {
       console.error("Error:", error);
-      setMessage("❌ Failed to save course. Check backend logs.");
+      setMessage(" Failed to save course. Check backend logs.");
     }
   };
 
