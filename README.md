@@ -1,3 +1,53 @@
+
+---
+
+## Frontend (`courses-frontend`)
+
+
+# 🖥 Courses Frontend (React + Vite + Docker)
+
+This is the React-based frontend for the Course Management System. It allows users to add, update, and view courses and course instances.
+
+---
+
+# Tech Stack
+
+- React
+- Vite
+- JavaScript
+- Docker
+
+---
+
+# Features
+
+- View all courses
+- Create and delete courses
+- View all course instances
+- Create course instances
+- Responsive and simple UI
+
+---
+
+# Development Setup
+
+Install dependencies:
+
+bash
+npm install
+
+ # Start the development server
+npm run dev
+
+# Build Docker image
+docker build -t mohdafzal123/course-frontend .
+
+# Push to DockerHub
+docker login
+docker push mohdafzal123/course-frontend
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
