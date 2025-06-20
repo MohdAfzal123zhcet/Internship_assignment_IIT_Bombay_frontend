@@ -39,6 +39,8 @@ npm install
  # Start the development server
 npm run dev
 
+# http://localhost:5173 → React app
+
 # Build Docker image
 docker build -t mohdafzal123/course-frontend .
 
