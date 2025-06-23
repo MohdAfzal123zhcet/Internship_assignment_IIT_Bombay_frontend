@@ -3,11 +3,12 @@
 
 ## Frontend (`courses-frontend`)
 
-![Screenshot (124)](https://github.com/user-attachments/assets/9c2cf48a-2c09-41a6-ba7b-f523993d41a7)
+![Screenshot (128)](https://github.com/user-attachments/assets/36719061-3410-4b29-b3e5-2651f238b35c)
 
 
 
-![Screenshot (125)](https://github.com/user-attachments/assets/21306c87-b432-476a-8140-7504ccd736ac)
+![Screenshot (129)](https://github.com/user-attachments/assets/aa15f5c4-0559-4617-889d-e4d2669a3e09)
+
 
 
 
