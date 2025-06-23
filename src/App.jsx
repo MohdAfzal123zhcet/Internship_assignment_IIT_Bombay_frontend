@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 import CourseForm from './components/CourseForm';
 import CourseList from './components/CourseList';
@@ -14,12 +14,45 @@ const App = () => {
         <header className="header">
           <h1>📘 Course Management App</h1>
           <nav className="nav">
-            <Link to="/">Home</Link>
-            <Link to="/courses/new">Create Course</Link>
-            <Link to="/courses">Course List</Link>
-            <Link to="/instances/new">Create Instance</Link>
-            <Link to="/instances">List Instances</Link>
-            <Link to="/instance/detail">Instance Detail</Link>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/courses/new"
+              className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'}
+            >
+              Create Course
+            </NavLink>
+            <NavLink
+              to="/courses"
+              end
+              className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'}
+            >
+              Course List
+            </NavLink>
+            <NavLink
+              to="/instances/new"
+              className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'}
+            >
+              Create Instance
+            </NavLink>
+            <NavLink
+              to="/instances"
+              end
+              className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'}
+            >
+              List Instances
+            </NavLink>
+            <NavLink
+              to="/instance/detail"
+              className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'}
+            >
+              Instance Detail
+            </NavLink>
           </nav>
         </header>
 

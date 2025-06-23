@@ -16,14 +16,20 @@ body {
   border-radius: 8px;
 }
 
-nav a {
+.nav-link {
   margin-right: 15px;
   text-decoration: none;
   color: #1976d2;
   font-weight: bold;
 }
 
-nav a:hover {
+.nav-link:hover {
+  text-decoration: underline;
+  color: #008000;
+}
+
+.active-link {
+  color: red;
   text-decoration: underline;
 }
 
@@ -60,4 +66,24 @@ th, td {
 
 th {
   background-color: #f2f2f2;
+}
+.nav a, .nav .nav-link {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+/* Hover style */
+.nav a:hover,
+.nav .nav-link:hover {
+  text-decoration: underline;
+  color: #008000;
+}
+
+/* Active link style */
+.nav a.active,
+.nav .nav-link.active {
+  color: red;
+  text-decoration: underline;
 }

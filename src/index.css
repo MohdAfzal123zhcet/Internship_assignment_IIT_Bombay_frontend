@@ -35,7 +35,7 @@ body {
   margin-bottom: 10px;
 }
 
-.nav a {
+/* .nav a {
   margin-right: 15px;
   text-decoration: none;
   color: navy;
@@ -44,9 +44,25 @@ body {
 
 .nav a:hover {
   text-decoration: underline;
-}
+} */
 
 .content {
   flex: 1;
   padding-top: 20px;
+}
+.nav-link {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #008000;
+}
+
+.active-link {
+  color: red;
+  text-decoration: underline;
 }
