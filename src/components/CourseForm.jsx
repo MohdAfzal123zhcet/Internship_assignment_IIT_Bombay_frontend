@@ -7,11 +7,24 @@ const CourseForm = ({ course, onSuccess = () => {}, onCancel = () => {} }) => {
   const [description, setDescription] = useState("");
   const [message, setMessage] = useState("");
 
+  // 👇 New state for prerequisites
+  const [prerequisites, setPrerequisites] = useState([]);
+  const [allCourses, setAllCourses] = useState([]);
+
   useEffect(() => {
+    // Fetch all existing courses for prerequisite selection
+    axios.get("http://localhost:8080/api/courses")
+      .then((res) => setAllCourses(res.data))
+      .catch((err) => console.error("Failed to load courses", err));
+
     if (course) {
       setCourseId(course.courseId);
       setTitle(course.title);
       setDescription(course.description);
+      // Pre-fill prerequisites if editing
+      if (course.prerequisites) {
+        setPrerequisites(course.prerequisites.map(p => p.courseId));
+      }
     }
   }, [course]);
 
@@ -22,7 +35,7 @@ const CourseForm = ({ course, onSuccess = () => {}, onCancel = () => {} }) => {
       courseId,
       title,
       description,
-      prerequisites: [] // excluded for now
+      prerequisites: prerequisites.map(id => ({ courseId: id }))  
     };
 
     console.log("Submitting:", newCourse);
@@ -79,6 +92,29 @@ const CourseForm = ({ course, onSuccess = () => {}, onCancel = () => {} }) => {
             required
             style={{ ...styles.input, height: "60px" }}
           />
+        </label>
+
+        {/*  Prerequisites multi-select dropdown */}
+        <label>
+          Prerequisites:
+          <select
+            multiple
+            value={prerequisites}
+            onChange={(e) =>
+              setPrerequisites(
+                Array.from(e.target.selectedOptions, option => option.value)
+              )
+            }
+            style={{ ...styles.input, height: "100px" }}
+          >
+            {allCourses
+              .filter(c => c.courseId !== courseId) // do not list self
+              .map(c => (
+                <option key={c.courseId} value={c.courseId}>
+                  {c.courseId} - {c.title}
+                </option>
+              ))}
+          </select>
         </label>
 
         <div style={styles.buttonRow}>
